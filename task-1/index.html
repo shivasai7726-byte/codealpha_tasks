@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Gallery | Premium Visual Experience</title>
+    <meta name="description" content="Explore a curated collection of stunning imagery in a premium, responsive gallery.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">Aura Gallery</h1>
+        <p class="tagline">A Curated Visual Journey</p>
+    </header>
+
+    <main class="gallery-container">
+        <section class="filters" id="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="architecture">Architecture</button>
+            <button class="filter-btn" data-filter="abstract">Abstract</button>
+        </section>
+
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- Images will be injected here or hardcoded for consistency -->
+            <div class="gallery-item nature" data-category="nature">
+                <img src="images/nature_1.png" alt="Misty forest at sunrise" loading="lazy">
+                <div class="item-overlay">
+                    <span>Misty Sunrise</span>
+                </div>
+            </div>
+            <div class="gallery-item nature" data-category="nature">
+                <img src="images/nature_2.png" alt="Turquoise alpine lake" loading="lazy">
+                <div class="item-overlay">
+                    <span>Alpine Lake</span>
+                </div>
+            </div>
+            <div class="gallery-item architecture" data-category="architecture">
+                <img src="images/arch_1.png" alt="Modern minimalist building" loading="lazy">
+                <div class="item-overlay">
+                    <span>Minimalist Glass</span>
+                </div>
+            </div>
+            <div class="gallery-item architecture" data-category="architecture">
+                <img src="images/arch_2.png" alt="Futuristic skyscraper" loading="lazy">
+                <div class="item-overlay">
+                    <span>Urban Future</span>
+                </div>
+            </div>
+            <div class="gallery-item abstract" data-category="abstract">
+                <img src="images/abstract_1.png" alt="Neon liquid metallic art" loading="lazy">
+                <div class="item-overlay">
+                    <span>Neon Flow</span>
+                </div>
+            </div>
+            <div class="gallery-item abstract" data-category="abstract">
+                <img src="images/abstract_2.png" alt="Warm silk waves with gold dust" loading="lazy">
+                <div class="item-overlay">
+                    <span>Golden Silk</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn">&times;</span>
+        <button class="nav-btn prev-btn" id="prev-btn">&lt;</button>
+        <button class="nav-btn next-btn" id="next-btn">&gt;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Aura Gallery. Crafted for excellence.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
