@@ -1,0 +1,134 @@
+:root {
+  color-scheme: dark;
+  --bg: #14161f;
+  --surface: #1e2234;
+  --surface-soft: #232741;
+  --text: #e8ecff;
+  --text-muted: #8f96b1;
+  --accent: #6d9dff;
+  --accent-strong: #4f7dff;
+  --danger: #ff5e7a;
+  --success: #3af4b7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at top, rgba(109, 157, 255, 0.16), transparent 25%),
+    linear-gradient(160deg, #10131b 0%, #14161f 35%, #0f1118 100%);
+  color: var(--text);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.calculator-shell {
+  width: min(420px, 100%);
+}
+
+.calculator-card {
+  background: linear-gradient(180deg, rgba(26, 29, 44, 0.95), rgba(19, 22, 36, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 32px;
+  backdrop-filter: blur(24px);
+  box-shadow: 0 34px 120px rgba(0, 0, 0, 0.26);
+  padding: 28px;
+}
+
+.display-panel {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding: 24px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.display-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+}
+
+.display-expression,
+.display-preview {
+  min-height: 3.4rem;
+  text-align: right;
+  word-break: break-word;
+}
+
+.display-expression {
+  font-size: 1.45rem;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+}
+
+.display-preview {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+button {
+  border: none;
+  border-radius: 22px;
+  min-height: 64px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08), 0 18px 30px rgba(10, 14, 28, 0.15);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.10);
+}
+
+.action-btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.equal-btn {
+  grid-row: span 2;
+  background: linear-gradient(180deg, var(--accent), var(--accent-strong));
+  color: #fff;
+}
+
+.wide-btn {
+  grid-column: span 2;
+}
+
+@media (max-width: 420px) {
+  .calculator-card {
+    padding: 22px;
+  }
+  button {
+    min-height: 56px;
+  }
+}
